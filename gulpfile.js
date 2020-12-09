@@ -54,7 +54,7 @@ const cssProd = () => {
 		.pipe(less())
 		.pipe(autoprefixer())
 		.pipe(cleanCss({
-			level: 2
+			// level: 2
 		}))
 		.pipe(gulp.dest(dist + "/css"))
 		.pipe(sync.stream());
