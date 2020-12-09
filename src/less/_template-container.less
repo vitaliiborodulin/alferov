@@ -1,0 +1,87 @@
+// out: false
+
+
+//           :=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:
+// container :=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:
+//           :=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:=-=:|:
+
+@sectionWidth-576     : 560px;
+@sectionWidth-646     : 640px;
+@sectionWidth-768     : 760px;
+@sectionWidth-992     : 970px;
+@sectionWidth-1200    : 1030px;
+@sectionWidth-1250    : 1230px;
+@sectionPaddingTop    : 54px;
+@sectionPaddingBottom : 78px;
+
+
+section,
+header,
+footer {
+  width     : 100%;
+  padding   : 0px 15px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 575.98px) {
+
+  section,
+  header,
+  footer {
+    padding: 0px ~"calc(50% - "@sectionWidth-576 / 2~")";
+  }
+
+}
+@media (min-width: 645.98px) {
+
+  section,
+  header,
+  footer {
+    padding: 0px ~"calc(50% - "@sectionWidth-646 / 2~")";
+  }
+
+
+}
+
+@media (min-width: 769px) {
+
+  section,
+  header,
+  footer {
+    padding: 0px ~"calc(50% - "@sectionWidth-768 / 2~")";
+  }
+
+
+}
+
+@media (min-width: 991.98px) {
+
+  section,
+  header,
+  footer {
+    padding: 0px ~"calc(50% - "@sectionWidth-992 / 2~")";
+  }
+
+
+}
+
+@media (min-width: 1199.98px) {
+
+  section,
+  header,
+  footer {
+    padding: 0px ~"calc(50% - "@sectionWidth-1200 / 2~")";
+  }
+
+
+}
+@media (min-width: 1250px) {
+
+  section,
+  header,
+  footer {
+    padding: 0px ~"calc(50% - "@sectionWidth-1250 / 2~")";
+  }
+
+
+}
