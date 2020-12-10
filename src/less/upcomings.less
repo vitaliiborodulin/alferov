@@ -1,0 +1,102 @@
+.upcomings {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	background-color: #ffffff;
+
+	&__title {
+		color      : #161616;
+		font-family: "Trajan Pro 3";
+		font-size  : 38px;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 69px;
+	}
+
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 40px;
+	}
+
+	&__image {
+		width: 50%;
+		
+		// max-height: 407px;
+		// background-color: #eaeaea;
+
+		display: flex;
+    justify-content: center;
+		align-items: center;
+		
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__text {
+		padding: 5px 50px;
+
+		time {
+			text-align: center;
+			display: block;
+			color: #6d8cff;
+			font-weight: 600;
+			padding: 23px 30px;
+			border: 1px dashed #cccccc;
+			border-radius: 10px;
+			margin-bottom: 30px;
+		}
+
+		p {
+			margin-bottom: 30px;
+		}
+
+		li {
+			position: relative;
+			padding-left: 36px;
+			margin-bottom: 34px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: #6d8cff url(../img/icons/gal-ochka--light.png) no-repeat center / auto;
+			}
+		}
+
+		&__btn {
+			// box-shadow: 0px 25px 43px 0px rgba(108, 152, 255, 0.3);
+		}
+	}
+}
+
+@media(max-width:992px) {
+
+}
+
+@media(max-width:646px) {
+	.upcomings {
+		padding-bottom: 0;
+		&__title {
+			font-size: 32px;
+		}
+		&__item {
+			flex-wrap: wrap;
+			width: 100%;
+		}
+		&__image {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+}
