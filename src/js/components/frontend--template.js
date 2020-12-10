@@ -318,6 +318,40 @@ var swipe = function (el, settings) {
 					});
 				}
 
+				if (document.querySelector('.testimonials-slider')) {
+					sliders.blogSlider = new Swiper('.testimonials-slider', {
+						slidesPerGroup: 1,
+						speed: 800,
+						autoplayDisableOnInteraction: false,
+
+						// simulateTouch: false,
+
+						slidesPerView: 1,
+						spaceBetween: 20,
+						touchRatio: 1,
+						watchSlidesVisibility: true,
+						watchSlidesProgress: true,
+
+						navigation: {
+							nextEl: '.testimonials-nav-next',
+							prevEl: '.testimonials-nav-prev',
+						},
+
+						breakpoints: {
+
+							646: {
+								spaceBetween: 10,
+								slidesPerView: 2,
+							},
+							992: {
+								spaceBetween: 30,
+								slidesPerView: 3,
+							},
+
+						}
+					});
+				}
+
 
 
 			},
