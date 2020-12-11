@@ -1,6 +1,7 @@
 let buttons = $('.calculator__answer input');
 const resSpan = $('#calc-res');
 const box = $('.calculator__total-box');
+const recomendText = $('.calculator__recomend--inner');
 
 let totalVal = 0;
 
@@ -21,20 +22,23 @@ buttons.on('click', function(){
 	// console.log(totalVal);
 
 	
-	if (totalVal < 3) {
+	if (totalVal > 3) {
 		box.removeClass('calculator__total-box--succ');
 		box.removeClass('calculator__total-box--warn');
 		box.addClass('calculator__total-box--alert');
+		recomendText.html('<p>Мои знания и навыки позволят вам добиться поставленных целей.</p><p><b>Предлагаю начать с бесплатной консультации</b></p>')
 	}
-	else if (totalVal >= 3 && totalVal <= 5) {
+	else if (totalVal <= 3 && totalVal >= 2) {
 		box.removeClass('calculator__total-box--succ');
 		box.removeClass('calculator__total-box--alert');
 		box.addClass('calculator__total-box--warn');
+		recomendText.html('<p>Вы отлично знаете, чего хотите от жизни и я помогу сделать ваши действия прибыльнее.</p><p><b>Предлагаю начать с бесплатной консультации</b></p>');
 	}
-	else if (totalVal > 5){
+	else if (totalVal < 2){
 		box.removeClass('calculator__total-box--alert');
 		box.removeClass('calculator__total-box--warn');
 		box.addClass('calculator__total-box--succ');
+		recomendText.html('<p>Похоже у вас все хорошо и без меня.</p><p><b>Но я буду рад помочь вашим коллегам и друзьям.</b></p>')
 	}
 
 	resSpan.text(totalVal);
