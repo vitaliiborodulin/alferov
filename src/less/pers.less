@@ -1,0 +1,145 @@
+.pers {
+	padding-top: 60px;
+	padding-bottom: 50px;
+	color: #ffffff;
+	min-height: 781px;
+	// background: url(../img/background/pers-bg.jpg) no-repeat center top/cover;
+	overflow: hidden;
+	position: relative;
+	
+	&-background__img {
+		height: 110%;
+	}
+	
+	&__content {
+		display: flex;
+	}
+
+	&__left {
+		width: 50%;
+		bottom: 0;
+		position: absolute;
+		z-index: 1;
+	}
+
+	&__sempl {
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		bottom: -5px;
+	}
+
+	&__badge {
+		position: absolute;
+		left: 5%;
+		bottom: 200px;
+		z-index: 3;
+		font-size: 20px;
+		font-weight: 500;
+
+		div {
+			position: relative;
+			color: #fff;
+			padding: 28px 57px;
+			border-radius: 10px;
+			transform: skewX(-10deg);
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 3px;
+				right: 3px;
+				top: 3px;
+				bottom: 3px;
+				border-radius: 10px;
+				border: 1px dashed #3b3b3b;
+			}
+		}
+	}
+
+	&__name {
+		z-index: 5;
+		background-color: #1c1c1d;
+	}
+
+	&__job {
+		left: 25px;
+		z-index: 4;
+		background-color: #2b2b2b;
+		margin-top: -10px;
+	}
+
+	&__right {
+		z-index: 3;
+		margin-left: auto;
+		width: 50%;
+		p {
+			font-size: 18px;
+			line-height: 28px;
+			margin-bottom: 40px;
+			max-width: 505px;
+		}
+	}
+
+	&__title {
+    font-family: "Trajan Pro 3";
+    font-size: 38px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    font-weight: 400;
+	}
+
+	&__btn {
+		margin-bottom: 40px;
+	}
+
+	&-soc__title {
+		opacity: 0.8;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 18px;
+		color: #ffffff;
+	}
+}
+
+@media(max-width:992px) {
+	.pers {
+		&__left {
+			display: none;
+		}
+		&__right {
+			width: 100%;
+		}
+		&__title {
+			text-align: center;
+		}
+		&__text {
+			p {
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+		}
+
+		&__btn {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&-soc {
+			text-align: center;
+		}
+		&-soc-list {
+			justify-content: center;
+		}
+	}
+}
+
+@media (max-width: 646px) {
+	.pers {
+		&__title {
+			font-size: 28px;
+		}
+	}
+}
+
