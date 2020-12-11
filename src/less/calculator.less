@@ -4,6 +4,23 @@
 	background-color: #ffffff;
 	overflow: hidden;
 
+	&-list {
+		&-1 {
+			left: 0;
+			top : 600px;
+		}
+
+		&-2 {
+			right: 0;
+			top  : 1480px;
+		}
+
+		&-3 {
+			left: 0;
+			bottom  : 1300px;
+		}
+	}
+
 	&__top {
 		text-align: center;
 		max-width: 760px;
@@ -104,7 +121,7 @@
 		#answer-5-1:checked+label,
 		#answer-6-1:checked+label {
 			color: #ffffff;
-			background-image: linear-gradient( -90deg, rgb(112,168,255) 0%, rgb(109,140,255) 100%);
+			background-image: linear-gradient( -90deg, rgb(255,112,112) 0%, rgb(255,70,70) 100%);
 		}
 		#answer-1-0:checked+label,
 		#answer-2-0:checked+label,
@@ -113,7 +130,7 @@
 		#answer-5-0:checked+label,
 		#answer-6-0:checked+label {
 			color: #ffffff;
-			background-image: linear-gradient( -90deg, rgb(255,112,112) 0%, rgb(255,70,70) 100%);
+			background-image: linear-gradient( -90deg, rgb(112,168,255) 0%, rgb(109,140,255) 100%);
 		}
 
 	}
@@ -196,6 +213,14 @@
 		}
 	}
 	
+}
+
+@media(max-width:1400px) {
+	.calculator {
+		.section-list {
+			display: none;
+		}
+	}
 }
 
 @media(max-width:992px) {
