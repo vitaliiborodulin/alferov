@@ -1,7 +1,15 @@
 .meet {
 	padding-top: 95px;
 	background-color: #ffffff;
-	min-height: 1120px;
+	// min-height: 1120px;
+	position: relative;
+
+	&-list {
+		&-1 {
+			right: 0;
+			top : 400px;
+		}
+	}
 
 	&__partners {
 		&-header {
@@ -57,15 +65,29 @@
 	&__after {
 		position: relative;
 		width: 40%;
+
+		img {
+			margin-bottom: -4px;
+		}
 	}
 
 	&__btn {
 		position: absolute;
-		bottom: 15%;
+		bottom: 10%;
 		left: 50%;
 		transform: translateX(-50%);
+		width: 300px;
+		margin-bottom: 0;
 	}
 
+}
+
+@media(max-width:1400px) {
+	.meet {
+		.section-list {
+			display: none;
+		}
+	}
 }
 
 @media(max-width:992px) {
