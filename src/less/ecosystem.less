@@ -1,19 +1,97 @@
 .ecosystem {
+	background: url(../img/background/ecosystem-bg-1.jpg) no-repeat center top/cover;
 	padding-top: 75px;
 	min-height: 1075px;
 
+	&::before {
+		display: none;
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -1;
+	}
+
 	&-list {
+		color: #ffffff;
+		font-size: 20px;
+		line-height: 32px;
+		font-weight: bold;
+		cursor: pointer;
+
+		display: flex;
+		align-items: center;
+
+		&:hover img {
+			transform: scale(1.1);
+		}
+
+		img {
+			margin-right: 30px;
+			transition: transform 0.5s ease;
+		}
+
 		&-1 {
 			left: 50px;
-			top : 100px;
+			top : 40px;
 		}
 		&-2 {
 			right: 0;
-			top : 200px;
+			bottom : 200px;
 		}
 		&-3 {
 			right: 50px;
-			bottom : 20px;
+			top : 20px;
+		}
+		&-4 {
+			left: 143px;
+			bottom : 215px;
+		}
+		&-5 {
+			left: 220px;
+			bottom : 385px;
+			img {
+				transform: scale(0.95) rotate(-90deg);
+			}
+		}
+		&-6 {
+			left: 320px;
+			bottom : 535px;
+			img {
+				transform: scale(0.85) rotate(-90deg);
+			}
+		}
+		&-7 {
+			left: 432px;
+			bottom : 665px;
+			img {
+				transform: scale(0.75) rotate(180deg);
+			}
+		}
+
+		&-8 {
+			right: 282px;
+			bottom : 565px;
+			img {
+				transform: scale(0.75) rotate(90deg);
+			}
+		}
+		&-9 {
+			right: 230px;
+			bottom : 400px;
+			img {
+				transform: scale(0.75);
+			}
+		}
+		&-10 {
+			right: 225px;
+			bottom : 215px;
+			img {
+				transform: scale(0.75);
+			}
 		}
 	}
 
@@ -31,5 +109,156 @@
 		margin-bottom: 40px;
 		font-weight: 400;
 		
+	}
+}
+
+@media (max-width: 1400px) {
+	.ecosystem {
+		&-list {
+			&-1, &-2, &-3 {
+				display: none;
+			}
+			&-4 {
+				left: 70px;
+			}
+			&-5 {
+				left: 150px;
+			}
+			&-6 {
+				left: 250px;
+			}
+			&-7 {
+				left: 360px;
+			}
+
+			&-8 {
+				right: 210px;
+			}
+			&-9 {
+				right: 160px;
+			}
+			&-10 {
+				right: 155px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1250px) {
+	.ecosystem {
+		&-list {
+			&-4 {
+				left: 35px;
+			}
+			&-5 {
+				left: 75px;
+			}
+			&-6 {
+				left: 125px;
+			}
+			&-7 {
+				left: 180px;
+			}
+
+			&-8 {
+				right: 105px;
+			}
+			&-9 {
+				right: 80px;
+			}
+			&-10 {
+				right: 75px;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.ecosystem {
+		&-list {
+			font-size: 17px;
+			line-height: 25px;
+			// flex-direction: column;
+			img {
+				margin-right: 10px;
+				transform: scale(0.75);
+			}
+			&-4 {
+				left: 20px;
+			}
+			&-5 {
+				left: 40px;
+			}
+			&-6 {
+				left: 60px;
+			}
+			&-7 {
+				left: 80px;
+			}
+
+			&-8 {
+				right: 40px;
+			}
+			&-9 {
+				right: 20px;
+			}
+			&-10 {
+				right: 40px;
+			}
+		}
+	}
+}
+
+@media (max-width: 646px) {
+	.ecosystem {
+		&::before {
+			display: block;
+		}
+		&__title {
+			font-size: 28px;
+		}
+		&-list {
+			&-4 {
+				left: 0;
+				bottom: 311px;
+			}
+			&-5 {
+				left: 0;
+				bottom: 117px;
+			}
+			&-6 {
+				left: 0;
+				bottom: 577px;
+			}
+			&-7 {
+				left: 0;
+				bottom: 670px;
+			}
+
+			&-8 {
+				right: unset;
+				left: 0;
+				bottom: 487px;
+			}
+			&-9 {
+				right: unset;
+				left: 0;
+				bottom: 400px;
+			}
+			&-10 {
+				right: unset;
+				left: 0;
+			}
+		}
+	}
+}
+
+
+
+@media(max-width:444px) {
+	.ecosystem {
+		&-list {
+			
+		}
 	}
 }
