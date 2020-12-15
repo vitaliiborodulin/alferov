@@ -100,7 +100,8 @@ const copy = () => {
         "src/source/**/*",
         "src/img/**/*",
         "src/files/**/*",
-        "src/php/**/*",
+				"src/php/**/*",
+				"src/favicon.ico"
     ], {
         base: 'src'
     })

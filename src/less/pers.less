@@ -31,41 +31,32 @@
 
 	&__badge {
 		position: absolute;
-		left: 5%;
-		bottom: 200px;
+		left: 9%;
+		bottom: 270px;
 		z-index: 3;
 		font-size: 20px;
 		font-weight: 500;
 
 		div {
 			position: relative;
-			color: #fff;
-			padding: 28px 57px;
-			border-radius: 10px;
-			transform: skewX(-10deg);
-
-			&::before {
-				content: '';
-				position: absolute;
-				left: 3px;
-				right: 3px;
-				top: 3px;
-				bottom: 3px;
-				border-radius: 10px;
-				border: 1px dashed #3b3b3b;
-			}
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 
 	&__name {
+		width: 298px;
+		height: 71px;
 		z-index: 5;
-		background-color: #1c1c1d;
+		background: url(../img/sempl/pers-name-bg.png) no-repeat center/cover;
 	}
-
+	
 	&__job {
-		left: 25px;
+		width: 340px;
+		height: 71px;
 		z-index: 4;
-		background-color: #2b2b2b;
+		background: url(../img/sempl/pers-job-bg.png) no-repeat center/cover;
 		margin-top: -15px;
 	}
 
@@ -86,13 +77,13 @@
 		font-size: 38px;
 		line-height: 60px;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-weight: 400;
 	}
 
 	&__btn {
-		width: 345px;
-		height: 70px;
+		width: 300px;
+		height: 77px;
 		font-size: 14px;
 		margin-bottom: 40px;
 	}

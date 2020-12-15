@@ -1,26 +1,27 @@
-.testimonials {
+.blog {
 	background    : #fff;
 	padding-top   : 70px;
-	// padding-bottom: 158px;
+	padding-bottom: 170px;
 
 	overflow: hidden;
 
-	&__title {
-		font-weight: 400;
+	&-top {
+		// display        : flex;
+		// align-items    : center;
+		// justify-content: center;
+		margin-bottom  : 86px;
+		text-align: center;
 	}
 
-	&-top {
-		display        : flex;
-		align-items    : center;
-		justify-content: center;
-		margin-bottom: 60px;
+	&__title {
+		max-width: 650px;
+		margin: 0 auto;
 	}
+
 
 	&-nav {
 		display    : flex;
-		margin-top: 50px;
-		margin-left: 0;
-		justify-content: center;
+		margin-left: 58px;
 
 		&-item {
 			width : 88px;
@@ -69,8 +70,7 @@
 		font-family: "Trajan Pro 3";
 		font-size  : 38px;
 		text-transform: uppercase;
-		max-width: 1045px;
-		text-align: center;
+		font-weight: 400;
 	}
 
 	&-list {
@@ -89,105 +89,84 @@
 		}
 	}
 
-	&-video {
-		width: 75px;
-		height: 75px;
-		background-image: linear-gradient( -90deg, rgb(61,167,253) 0%, rgb(38,88,239) 100%);
-		border-radius: 50%;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
 
-		&__btn {
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			transition: background-color 0.5s ease;
 
-			img {
-				width: 22px;
-				height: 22px;
-				margin-left: 2px;
-			}
-
-			&:hover {
-				background-color: #3a61ec;
-			}
-		}
-	}
 
 	&-item {
-		height       : 300px;
+		height       : 330px;
 		border-radius: 10px;
 		overflow     : hidden;
 		position     : relative;
 
 		&__img {
-			// width   : 100%;
-			// height  : 100%;
-			min-width: 237px;
+			width   : 100%;
+			height  : 100%;
 			position: absolute;
 			left    : 0;
 			top     : 0;
-			z-index: 2;
 
-			> img {
+			img {
 				width     : 100%;
 				height    : 100%;
 				object-fit: cover;
 			}
-
 		}
 
 		&__content {
-			// position       : relative;
+			position       : relative;
 			z-index        : 1;
 			height         : 100%;
 			width          : 100%;
-			// padding        : 32px 64px;
+			padding        : 32px 64px;
 			display        : flex;
 			flex-direction : column;
 			justify-content: flex-end;
 		}
 
 		&__title {
-			// color      : #ffffff;
-			font-size  : 17px;
+			color      : #ffffff;
+			font-size  : 16px;
 			font-weight: 400;
 			line-height: 27px;
 
 			position: relative;
 
+
+			&:before {
+				content: '';
+				width  : 18px;
+				height : 18px;
+				border : 2px solid #6c8bff;
+
+				position : absolute;
+				left     : -24px;
+				top      : -18px;
+				transform: rotateZ(45deg);
+			}
+
+			span {
+				font-weight: 600;
+			}
 		}
 
 		&__btn {
-			// width     : 170px;
-			// height    : 42px;
-			margin-top: 5px;
-			color: #6d8cff;
-			text-decoration: underline;
+			width     : 170px;
+			height    : 42px;
+			margin-top: 40px;
 		}
 	}
 }
 
-@media(max-width:646px) {
-	.testimonials {
-		padding-top: 35px;
-		text-align: center;
-		&__title {
-			font-size: 28px;
-		}
-		&-image {
-			left: 50%;
-			transform: translateX(-50%);
-		}
+.blog.blog-home {
+	padding-bottom: 158px;
+
+	.blog-top {
+		margin-bottom: 60px;
 	}
+	.blog-nav {
+		margin-top: 50px;
+		margin-left: 0;
+		justify-content: center;
+	}
+	
 }
-
-
-
-
