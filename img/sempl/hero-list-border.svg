@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="209" height="223" viewBox="0 0 209 223">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: none;
-        stroke: #fff;
-        stroke-width: 1px;
-        fill-rule: evenodd;
-        opacity: 0.2;
-      }
-    </style>
-  </defs>
-  <path id="Прямоугольник_10" data-name="Прямоугольник 10" class="cls-1" d="M537.528,255.973l-193.9-16.923c-4.207-.367-7.628,1.524-7.628,4.227V456.106c0,2.7,3.421,4.892,7.628,4.892h193.9c3.579,0,6.472-2.012,6.472-4.493V261.031C544,258.55,541.107,256.285,537.528,255.973Z" transform="translate(-335.5 -238.5)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="209" height="223"><path data-name="Прямоугольник 10" d="M202.028 17.473L8.128.55C3.921.183.5 2.074.5 4.777v212.829c0 2.7 3.421 4.892 7.628 4.892h193.9c3.579 0 6.472-2.012 6.472-4.493V22.531c0-2.481-2.893-4.746-6.472-5.058z" fill="none" stroke="#fff" opacity=".2"/></svg>
