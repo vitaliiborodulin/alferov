@@ -14,6 +14,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCss = require('gulp-clean-css');
 const gcmq = require('gulp-group-css-media-queries');
 
+const imagemin = require('gulp-imagemin');
+const newer = require('gulp-newer')
+
 const dist = "./dist/";
 
 // HTML
@@ -53,9 +56,7 @@ const cssProd = () => {
     return gulp.src("./src/less/styles.less")
 		.pipe(less())
 		.pipe(autoprefixer())
-		.pipe(cleanCss({
-			// level: 2
-		}))
+		.pipe(cleanCss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
 		.pipe(gulp.dest(dist + "/css"))
 		.pipe(sync.stream());
 }
@@ -93,12 +94,29 @@ const jsProd = () => {
 
 exports.jsProd = jsProd;
 
+const imagesDev = () => {
+	return gulp.src("./src/img/**/*.*")
+				.pipe(newer(dist + "img"))
+				.pipe(gulp.dest(dist + "img"))
+}
+
+exports.imagesDev = imagesDev;
+
+const imagesProd = () => {
+	return gulp.src("./src/img/**/*.*")
+				.pipe(newer(dist + "img"))
+				.pipe(imagemin())
+				.pipe(gulp.dest(dist + "img"))
+				.pipe(sync.stream())
+}
+
+exports.imagesProd = imagesProd;
+
 // Copy
 const copy = () => {
     return gulp.src([
         "src/fonts/**/*",
         "src/source/**/*",
-        "src/img/**/*",
         "src/files/**/*",
 				"src/php/**/*",
 				"src/favicon.ico"
@@ -145,10 +163,10 @@ const watch = () => {
     gulp.watch("./src/html/*.html", gulp.series(htmlDev));
     gulp.watch("./src/less/**/*.less", gulp.series(cssDev));
     gulp.watch("./src/js/**/*.js", gulp.series(jsDev));
-    gulp.watch("./src/files/*.*", gulp.series(copy));
+    gulp.watch("./src/img/**/*.*", gulp.series(imagesDev));
     gulp.watch([
         "src/fonts/**/*",
-        "src/img/**/*",
+        "./src/files/*.*"
     ], gulp.series("copy"));
 }
 
@@ -160,7 +178,8 @@ exports.dev = gulp.series(
     gulp.parallel(
         htmlDev,
         cssDev,
-        jsDev,
+				jsDev,
+				imagesDev,
         copy
     ),
     gulp.parallel(
@@ -175,7 +194,8 @@ exports.build = gulp.series(
     gulp.parallel(
         htmlProd,
         cssProd,
-        jsProd,
+				jsProd,
+				imagesProd,
         copy
     )
 );
