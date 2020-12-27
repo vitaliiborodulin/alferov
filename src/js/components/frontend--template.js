@@ -193,7 +193,7 @@ var swipe = function (el, settings) {
 			},
 
 			load: function () {
-				new WOW({ offset: 102 }).init();
+				new WOW({ offset: 102, mobile: false }).init();
 				window.addEventListener('load', function () {
 					tm.methods.parallax();
 
